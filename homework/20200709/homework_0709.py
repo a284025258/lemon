@@ -72,7 +72,7 @@ print("----------------------------第1题----------------------------")
 print("欢迎游玩【剪刀石头布】游戏！")
 list1 = ['石头', '剪刀', '布']
 while True:
-    player = input("请输入您要出的拳 ：石头【1】 剪刀【2】 布【3】 退出【4】")
+    player = input("请输入您要出的拳 ：石头【1】 剪刀【2】 布【3】 退出【4】\n")
     if player in ['1', '2', '3', '4']:
         player = int(player)
         if player == 4:
@@ -96,7 +96,7 @@ print("----------------------------第2题----------------------------")
 number1 = float(input("请输入第1个数："))
 number2 = float(input("请输入第2个数："))
 while True:
-    operation = input('请选择：加【1】    减【2】    乘【3】    除【4】')
+    operation = input('请选择：加【1】    减【2】    乘【3】    除【4】\n')
     if operation not in ['1', '2', '3', '4']:
         print("您选择的操作有误, 请重新选择!")
     else:
@@ -112,3 +112,166 @@ while True:
         break
 
 print("----------------------------第3题----------------------------")
+data = {
+    "code": 0,
+    "msg": "OK",
+    "data": {
+        "id": 74711,
+        "leave_amount": 29600.0,
+        "mobile_phone": "13367899876",
+        "reg_name": "小柠檬666",
+        "reg_time": "2019-12-13 11:12:53.0",
+        "type": 0,
+        "token_info": {
+            "token_type": "Bearer",
+            "expires_in": "2019-12-30 22:28:57",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjc0NzExLCJleHAiOjE1Nzc3MTYxMzd9.eNMtnEWr57iJoZRf2IRsGDWm2GKj9LZc1J2SGRprAwOk7EPoJeXSjJwdh0pcVVJygHmsbh1TashWqFv1bvCVZQ"
+        }
+    },
+    "copyright": "Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+print(f'reg_name: {data["data"]["reg_name"]}\ntoken: {data["data"]["token_info"]["token"]}')
+
+print("----------------------------第4题----------------------------")
+li = [1, 21, 33, 221, 432, 121, 44, 21, 22, 44, 1, 221]
+print(f'原始列表：{li}')
+# 去除列表重复元素
+li = list(set(li))
+print(f'去重后的结果：{li}')
+# 升序排序
+li.sort()
+print(f'排序后的结果：{li}')
+# 将元素为偶数的元素，添加到新列表
+even_li = []
+for i in li:
+    if i % 2 == 0:
+        even_li.append(i)
+print(f'新列表为：{even_li}')
+
+print("----------------------------第5题----------------------------")
+print('请依次输入3个整数')
+x = int(input('请输入第1个整数：\n'))
+y = int(input('请输入第2个整数：\n'))
+z = int(input('请输入第3个整数：\n'))
+# 默认第一个数最大
+max_number = x
+# x， y 两者比较，如果 y 大，则将 y 赋值给 max_number
+if x < y:
+    max_number = y
+# max_number，z 两者比较，如果 z 大，则将 z 赋值给 max_number
+if max_number < z:
+    max_number = z
+    # x，y两者比较，则可直接判断三者大小关系
+    if x > y:
+        print(f'您输入的三个数从小到大依次为：{y} - {x} - {z}')
+    else:
+        print(f'您输入的三个数从小到大依次为：{x} - {y} - {z}')
+# max_number，z 两者比较，如果 max_number 大，则继续比较 max_number 是 x 还是 y
+elif max_number > z and max_number == x:
+    # 若 max_number 是 x，则比较 y，z，则可判断三者大小
+    if z > y:
+        print(f'您输入的三个数从小到大依次为：{y} - {z} - {x}')
+    else:
+        print(f'您输入的三个数从小到大依次为：{z} - {y} - {x}')
+elif max_number > z and max_number == y:
+    # 若 max_number 是 x，则比较 x，z，则可判断三者大小
+    if z > x:
+        print(f'您输入的三个数从小到大依次为：{x} - {z} - {y}')
+    else:
+        print(f'您输入的三个数从小到大依次为：{z} - {x} - {y}')
+# 若 max_number 与 z 相等
+elif max_number == z:
+    # 则比较 x，y，则可判断三者大小
+    if x > y:
+        print(f'您输入的三个数从小到大依次为：{y} - {x} - {z}')
+    # 若 x，y，z 三者相等，则直接输出结果
+    else:
+        print(f'您输入的三个数从小到大依次为：{x} - {y} - {z}')
+
+print("----------------------------第6题----------------------------")
+print('0 - 100 的偶数为：')
+for i in range(0, 101):
+    if i % 2 == 0:
+        print(i, end=' ')
+print()
+print("----------------------------第7题----------------------------")
+dict7 = {"a": 1, "b": 22, "c": 3, "d": 4, "e": 5}
+print('原始字典为：', dict7)
+for k, v in dict7.items():
+    dict7[k] = v * 10
+print('修改后的字典为：', dict7)
+
+print("----------------------------扩展题 第1题----------------------------")
+while True:
+    profits = float(input('请输入总利润：\n'))
+    if 0 <= profits <= 100000:
+        bonus = profits * 0.1
+    elif 100000 < profits <= 200000:
+        bonus = 100000 * 0.1 + (profits - 100000) * 0.075
+    elif 200000 < profits <= 400000:
+        bonus = 100000 * 0.1 + 100000 * 0.075 + (profits - 200000) * 0.05
+    elif 400000 < profits <= 600000:
+        bonus = 100000 * 0.1 + 100000 * 0.075 + 200000 * 0.05 + (profits - 400000) * 0.03
+    elif 600000 < profits <= 1000000:
+        bonus = 100000 * 0.1 + 100000 * 0.075 + 200000 * 0.05 + 200000 * 0.03 + (profits - 600000) * 0.015
+    elif profits > 1000000:
+        bonus = 100000 * 0.1 + 100000 * 0.075 + 200000 * 0.05 + 200000 * 0.03 + 400000 * 0.015 + (profits - 600000) * 0.01
+    else:
+        print('输入有误，请重新输入！')
+        continue
+    print('总利润为：{:.2f}, 奖金为：{:.2f}'.format(profits, bonus))
+    break
+
+print("----------------------------扩展题 第2题----------------------------")
+goods_list = [{'可乐': '2.5'}, {'雪碧':'2.5'}, {'哇哈哈':'3'}, {'红牛': '6'}, {'脉动': '4'}, {'果粒橙': '3.5'}]
+# 第1重循环：判断输入商品编号，是否在商品列表里
+while True:
+    goods_str = input('请输入您购买的商品编号：\n 【1】可乐 2.5元​ 【2】雪碧 2.5元​ 【3】哇哈哈 3元​ 【4】红牛 6元​ 【5】脉动 4元​ 【6】果粒橙 3.5元\n')
+    # 输入商品编号，不在商品列表，则结束本次循环，重新输入商品编号
+    if goods_str not in ['1', '2', '3', '4', '5', '6']:
+        print('您选择有误，请重新选择！')
+        continue
+    # 输入商品编号，存在于商品列表，继续执行
+    # 将商品编号转换为 int 类型
+    goods = int(goods_str)
+    # 获取输入商品的名称
+    name = list(goods_list[goods - 1].items())[0][0]
+    # 获取输入商品的价格
+    price = float(list(goods_list[goods - 1].items())[0][1])
+    print(f'您购买的是：【{name}】，需要支付金额为：【{price}】元')
+    money = 0
+    # 第2重循环：判断投币的金额是否支持
+    while True:
+        money_str = input('请投币（支持1元，5元，10元）:\n')
+        # 投币的金额不支持，则退出本次循环，重新投币
+        if money_str not in ['1', '5', '10']:
+            print('您投币金额不支持，已退回！请重新投币。')
+            continue
+        # 投币的金额支持，继续执行
+        # 将投币金额转换为 int 类型
+        money += int(money_str)
+        if money >= price:
+            print('您投币总额为：{:.2f}元, 本次消费{:.2f}元，找零{:.2f}元！交易结束，欢迎下次再来！'.format(money, price, money - price))
+            break
+        else:
+            print('您投币总额为{:.2f}元, 该商品的价格为{:.2f}, 不足以支付该商品，请继续投币。:\n'.format(money, price))
+            continue
+    break
+
+print("----------------------------扩展题 第3题----------------------------")
+print('九九乘法表：')
+for i in range(1, 10):
+    for j in range(1, i + 1):
+        print(f'{j} x {i} = {i * j} \t', end='')
+    print()
+
+print("----------------------------扩展题 第4题----------------------------")
+money4 = 100
+price_a = 5
+price_b = 3
+price_c = 0.5
+for a in range(int(money4 / price_a + 1)):
+    for b in range(int(money4 / price_b + 1)):
+        for c in range(int(money4 / price_c + 1)):
+            if a + b + c == 100 and price_a * a + price_b * b + price_c * c == 100:
+                print(f'可能的组合为：a类书买{a}本，b类书买{b}本， c类书买{c}本')
