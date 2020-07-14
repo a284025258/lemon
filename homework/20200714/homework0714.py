@@ -49,21 +49,16 @@ print("----------------------------第3题----------------------------")
 
 
 def add(*args, **kwargs):
-    if len(args) == 1 and len(kwargs) == 0:
-        return args[0]
-    elif len(args) == 0 and len(kwargs) == 1:
-        for i in kwargs.values():
-            return i
-    else:
-        sum3 = 0
-        for i in args:
-            sum3 += i
-        for j in kwargs.values():
-            sum3 += j
-        return sum3
+    sum3 = 0
+    for i in args:
+        sum3 += i
+    for j in kwargs.values():
+        sum3 += j
+    return sum3
 
 
 print(add(1))
+print(add(a=1))
 print(add(11, 22))
 print(add(a=11, b=22))
 print(add(11, 22, a=33, b=44))
