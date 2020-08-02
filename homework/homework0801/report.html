@@ -146,15 +146,15 @@
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">开始时间</button>
-                <span class="text-dark">2020-08-01 22:19:49</span>
+                <span class="text-dark">2020-08-02 13:51:04</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">执行时间</button>
-                <span class="text-dark">0.06 S</span>
+                <span class="text-dark">0.31 S</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">用例总数</button>
-                <span class="text-dark">10</span>
+                <span class="text-dark">16</span>
             </li>
 
 
@@ -165,7 +165,7 @@
 
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">成功用例</button>
-                <span class="text-success">9</span>
+                <span class="text-success">15</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-danger">失败用例</button>
@@ -215,6 +215,8 @@
                     <select id="testClass">
                         <option>所有</option>
                         
+                        <option>TestLogin</option>
+                        
                         <option>TestRegister</option>
                         
                     </select>
@@ -243,10 +245,10 @@
             
             <tr>
                 <td>1</td>
-                <td class="TestRegister">TestRegister</td>
-                <td>test_register_01</td>
+                <td class="TestLogin">TestLogin</td>
+                <td>test_register_1</td>
                 <td>帐号和密码均为空</td>
-                <td>0.00703s</td>
+                <td>0.0199s</td>
                 
                 <td class="text-success">成功</td>
                 
@@ -260,7 +262,7 @@
                 <td colspan="7">
                     
 
-                    <pre>test_register_01 (__main__.TestRegister)执行——>【通过】
+                    <pre>test_register_1 (test_case.TestLogin)执行——>【通过】
 </pre>
                     
                     
@@ -269,10 +271,10 @@
             
             <tr>
                 <td>2</td>
-                <td class="TestRegister">TestRegister</td>
-                <td>test_register_02</td>
+                <td class="TestLogin">TestLogin</td>
+                <td>test_register_2</td>
                 <td>帐号为空</td>
-                <td>0.00598s</td>
+                <td>0.018s</td>
                 
                 <td class="text-success">成功</td>
                 
@@ -286,7 +288,7 @@
                 <td colspan="7">
                     
 
-                    <pre>test_register_02 (__main__.TestRegister)执行——>【通过】
+                    <pre>test_register_2 (test_case.TestLogin)执行——>【通过】
 </pre>
                     
                     
@@ -295,10 +297,10 @@
             
             <tr>
                 <td>3</td>
-                <td class="TestRegister">TestRegister</td>
-                <td>test_register_03</td>
+                <td class="TestLogin">TestLogin</td>
+                <td>test_register_3</td>
                 <td>密码为空</td>
-                <td>0.00594s</td>
+                <td>0.017s</td>
                 
                 <td class="text-success">成功</td>
                 
@@ -312,7 +314,7 @@
                 <td colspan="7">
                     
 
-                    <pre>test_register_03 (__main__.TestRegister)执行——>【通过】
+                    <pre>test_register_3 (test_case.TestLogin)执行——>【通过】
 </pre>
                     
                     
@@ -321,10 +323,10 @@
             
             <tr>
                 <td>4</td>
-                <td class="TestRegister">TestRegister</td>
-                <td>test_register_04</td>
-                <td>密码小于6位</td>
-                <td>0.00598s</td>
+                <td class="TestLogin">TestLogin</td>
+                <td>test_register_4</td>
+                <td>密码不正确</td>
+                <td>0.018s</td>
                 
                 <td class="text-success">成功</td>
                 
@@ -338,7 +340,7 @@
                 <td colspan="7">
                     
 
-                    <pre>test_register_04 (__main__.TestRegister)执行——>【通过】
+                    <pre>test_register_4 (test_case.TestLogin)执行——>【通过】
 </pre>
                     
                     
@@ -347,10 +349,10 @@
             
             <tr>
                 <td>5</td>
-                <td class="TestRegister">TestRegister</td>
-                <td>test_register_05</td>
-                <td>密码大于18位</td>
-                <td>0.00602s</td>
+                <td class="TestLogin">TestLogin</td>
+                <td>test_register_5</td>
+                <td>帐号不存在</td>
+                <td>0.0169s</td>
                 
                 <td class="text-success">成功</td>
                 
@@ -364,7 +366,7 @@
                 <td colspan="7">
                     
 
-                    <pre>test_register_05 (__main__.TestRegister)执行——>【通过】
+                    <pre>test_register_5 (test_case.TestLogin)执行——>【通过】
 </pre>
                     
                     
@@ -373,10 +375,10 @@
             
             <tr>
                 <td>6</td>
-                <td class="TestRegister">TestRegister</td>
-                <td>test_register_06</td>
-                <td>帐号已注册</td>
-                <td>0.00495s</td>
+                <td class="TestLogin">TestLogin</td>
+                <td>test_register_6</td>
+                <td>正常登录</td>
+                <td>0.017s</td>
                 
                 <td class="text-success">成功</td>
                 
@@ -390,7 +392,7 @@
                 <td colspan="7">
                     
 
-                    <pre>test_register_06 (__main__.TestRegister)执行——>【通过】
+                    <pre>test_register_6 (test_case.TestLogin)执行——>【通过】
 </pre>
                     
                     
@@ -400,9 +402,9 @@
             <tr>
                 <td>7</td>
                 <td class="TestRegister">TestRegister</td>
-                <td>test_register_07</td>
-                <td>两次密码不一致</td>
-                <td>0.00599s</td>
+                <td>test_register_01</td>
+                <td>帐号和密码均为空</td>
+                <td>0.0199s</td>
                 
                 <td class="text-success">成功</td>
                 
@@ -416,7 +418,7 @@
                 <td colspan="7">
                     
 
-                    <pre>test_register_07 (__main__.TestRegister)执行——>【通过】
+                    <pre>test_register_01 (test_case.TestRegister)执行——>【通过】
 </pre>
                     
                     
@@ -426,9 +428,9 @@
             <tr>
                 <td>8</td>
                 <td class="TestRegister">TestRegister</td>
-                <td>test_register_08</td>
-                <td>帐号小于6位</td>
-                <td>0.00598s</td>
+                <td>test_register_02</td>
+                <td>帐号为空</td>
+                <td>0.0209s</td>
                 
                 <td class="text-success">成功</td>
                 
@@ -442,7 +444,7 @@
                 <td colspan="7">
                     
 
-                    <pre>test_register_08 (__main__.TestRegister)执行——>【通过】
+                    <pre>test_register_02 (test_case.TestRegister)执行——>【通过】
 </pre>
                     
                     
@@ -452,9 +454,165 @@
             <tr>
                 <td>9</td>
                 <td class="TestRegister">TestRegister</td>
+                <td>test_register_03</td>
+                <td>密码为空</td>
+                <td>0.0199s</td>
+                
+                <td class="text-success">成功</td>
+                
+                <td>
+                    <button type="button" class="btn btn-success btn_info">查看详情</button>
+                </td>
+            </tr>
+
+            <tr class="test_log">
+
+                <td colspan="7">
+                    
+
+                    <pre>test_register_03 (test_case.TestRegister)执行——>【通过】
+</pre>
+                    
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>10</td>
+                <td class="TestRegister">TestRegister</td>
+                <td>test_register_04</td>
+                <td>密码小于6位</td>
+                <td>0.0199s</td>
+                
+                <td class="text-success">成功</td>
+                
+                <td>
+                    <button type="button" class="btn btn-success btn_info">查看详情</button>
+                </td>
+            </tr>
+
+            <tr class="test_log">
+
+                <td colspan="7">
+                    
+
+                    <pre>test_register_04 (test_case.TestRegister)执行——>【通过】
+</pre>
+                    
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>11</td>
+                <td class="TestRegister">TestRegister</td>
+                <td>test_register_05</td>
+                <td>密码大于18位</td>
+                <td>0.0199s</td>
+                
+                <td class="text-success">成功</td>
+                
+                <td>
+                    <button type="button" class="btn btn-success btn_info">查看详情</button>
+                </td>
+            </tr>
+
+            <tr class="test_log">
+
+                <td colspan="7">
+                    
+
+                    <pre>test_register_05 (test_case.TestRegister)执行——>【通过】
+</pre>
+                    
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>12</td>
+                <td class="TestRegister">TestRegister</td>
+                <td>test_register_06</td>
+                <td>帐号已注册</td>
+                <td>0.0199s</td>
+                
+                <td class="text-success">成功</td>
+                
+                <td>
+                    <button type="button" class="btn btn-success btn_info">查看详情</button>
+                </td>
+            </tr>
+
+            <tr class="test_log">
+
+                <td colspan="7">
+                    
+
+                    <pre>test_register_06 (test_case.TestRegister)执行——>【通过】
+</pre>
+                    
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>13</td>
+                <td class="TestRegister">TestRegister</td>
+                <td>test_register_07</td>
+                <td>两次密码不一致</td>
+                <td>0.02s</td>
+                
+                <td class="text-success">成功</td>
+                
+                <td>
+                    <button type="button" class="btn btn-success btn_info">查看详情</button>
+                </td>
+            </tr>
+
+            <tr class="test_log">
+
+                <td colspan="7">
+                    
+
+                    <pre>test_register_07 (test_case.TestRegister)执行——>【通过】
+</pre>
+                    
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>14</td>
+                <td class="TestRegister">TestRegister</td>
+                <td>test_register_08</td>
+                <td>帐号小于6位</td>
+                <td>0.0189s</td>
+                
+                <td class="text-success">成功</td>
+                
+                <td>
+                    <button type="button" class="btn btn-success btn_info">查看详情</button>
+                </td>
+            </tr>
+
+            <tr class="test_log">
+
+                <td colspan="7">
+                    
+
+                    <pre>test_register_08 (test_case.TestRegister)执行——>【通过】
+</pre>
+                    
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>15</td>
+                <td class="TestRegister">TestRegister</td>
                 <td>test_register_09</td>
                 <td>帐号大于18位</td>
-                <td>0.00698s</td>
+                <td>0.0189s</td>
                 
                 <td class="text-danger">失败</td>
                 
@@ -468,7 +626,7 @@
                 <td colspan="7">
                     
 
-                    <pre>test_register_09 (__main__.TestRegister)执行——>【失败】
+                    <pre>test_register_09 (test_case.TestRegister)执行——>【失败】
 </pre>
                     
 
@@ -491,12 +649,12 @@
 </pre>
                     
 
-                    <pre>  File "D:/pychram_workspace/lemon_homework/homework/homework0801/test_case.py", line 60, in test_register
+                    <pre>  File "D:\pychram_workspace\lemon_homework\homework\homework0801\test_case.py", line 61, in test_register
     raise e
 </pre>
                     
 
-                    <pre>  File "D:/pychram_workspace/lemon_homework/homework/homework0801/test_case.py", line 53, in test_register
+                    <pre>  File "D:\pychram_workspace\lemon_homework\homework\homework0801\test_case.py", line 54, in test_register
     self.assertEqual(eval(case["expected"]), result)
 </pre>
                     
@@ -526,11 +684,11 @@
             </tr>
             
             <tr>
-                <td>10</td>
+                <td>16</td>
                 <td class="TestRegister">TestRegister</td>
                 <td>test_register_10</td>
                 <td>正常注册</td>
-                <td>0.00602s</td>
+                <td>0.0189s</td>
                 
                 <td class="text-success">成功</td>
                 
@@ -544,7 +702,7 @@
                 <td colspan="7">
                     
 
-                    <pre>test_register_10 (__main__.TestRegister)执行——>【通过】
+                    <pre>test_register_10 (test_case.TestRegister)执行——>【通过】
 </pre>
                     
                     
@@ -680,7 +838,7 @@
                     show: false
                 },
                 data: [
-                    {value: 9, name: '通过'},
+                    {value: 15, name: '通过'},
                     {value: 1, name: '失败'},
                     {value: 0, name: '错误'},
                     {value: 0, name: '跳过'}
@@ -702,8 +860,8 @@
             {
                 name: '测试结果',
                 type: 'gauge',
-                detail: {formatter: '90.00%'},
-                data: [{value: '90.00', name: '用例通过率'}]
+                detail: {formatter: '93.75%'},
+                data: [{value: '93.75', name: '用例通过率'}]
             }
         ]
     };

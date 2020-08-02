@@ -36,9 +36,10 @@
 """
 import unittest
 from unittestreport import TestRunner
-from homework.homework0730.register import register
+from homework.homework0801.register import register
+from homework.homework0801.login import login_check
 from homework.homework0801.ddt import data, ddt
-from homework.homework0730.read_excel import ReadExcel
+from homework.homework0801.read_excel import ReadExcel
 
 
 @ddt
@@ -59,8 +60,26 @@ class TestRegister(unittest.TestCase):
                 self.read_excel.write_data(case["case_id"] + 1, 6, "Error")
             raise e
 
+@ddt
+class TestLogin(unittest.TestCase):
+    """用户登录测试用例类"""
+    read_excel = ReadExcel(filename=r"./cases.xlsx", sheet_name="login")
+    cases = read_excel.read_data()
+    @data(*cases)
+    def test_register(self, case):
+        result = login_check(**eval(case["param"]))
+        try:
+            self.assertEqual(eval(case["expected"]), result)
+            self.read_excel.write_data(case["case_id"] + 1, 6, "已通过")
+        except (AssertionError, Exception) as e:
+            if isinstance(e, AssertionError):
+                self.read_excel.write_data(case["case_id"] + 1, 6, "未通过")
+            else:
+                self.read_excel.write_data(case["case_id"] + 1, 6, "Error")
+            raise e
+
 
 if __name__ == "__main__":
-    suite = unittest.defaultTestLoader.loadTestsFromTestCase(TestRegister)
+    suite = unittest.defaultTestLoader.discover(r"./")
     runner = TestRunner(suite=suite, tester="小石头", desc="小石头的测试报告")
     runner.run()

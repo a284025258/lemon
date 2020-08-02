@@ -5,11 +5,15 @@ class ReadExcel(object):
     def __init__(self, filename, sheet_name):
         self.filename = filename
         self.sheet_name = sheet_name
-        self.workbook = openpyxl.load_workbook(filename)
-        self.sheet = self.workbook[sheet_name]
+
+    def open(self):
+        """打开文件  读数据与写数据必须分别创建 Excel 对象，否则不会正确写入"""
+        self.workbook = openpyxl.load_workbook(self.filename)
+        self.sheet = self.workbook[self.sheet_name]
 
     def read_data(self) -> list:
         """读数据"""
+        self.open()
         rows = list(self.sheet.rows)
         # 获取第一行的单元格数据并添加到 title 列表
         title = [row.value for row in rows[0]]
@@ -22,6 +26,7 @@ class ReadExcel(object):
 
     def write_data(self, row, col, value):
         """写数据"""
+        self.open()
         self.sheet.cell(row=row, column=col, value=value)
         self.workbook.save(self.filename)
 
