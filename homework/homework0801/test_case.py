@@ -36,10 +36,10 @@
 """
 import unittest
 from unittestreport import TestRunner
-from homework.homework0801.register import register
-from homework.homework0801.login import login_check
-from homework.homework0801.ddt import data, ddt
-from homework.homework0801.read_excel import ReadExcel
+from .register import register
+from .login import login_check
+from .ddt import data, ddt
+from .read_excel import ReadExcel
 
 
 @ddt
@@ -59,6 +59,7 @@ class TestRegister(unittest.TestCase):
             else:
                 self.read_excel.write_data(case["case_id"] + 1, 6, "Error")
             raise e
+
 
 @ddt
 class TestLogin(unittest.TestCase):
